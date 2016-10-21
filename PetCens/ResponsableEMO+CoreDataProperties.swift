@@ -1,8 +1,8 @@
 //
-//  Responsable+CoreDataProperties.swift
+//  ResponsableEMO+CoreDataProperties.swift
 //  PetCens
 //
-//  Created by Infraestructura on 14/10/16.
+//  Created by Infraestructura on 21/10/16.
 //  Copyright © 2016 Infraestructura. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -12,7 +12,7 @@
 import Foundation
 import CoreData
 
-extension Responsable {
+extension ResponsableEMO {
 
     @NSManaged var apellidos: String?
     @NSManaged var calleyno: String?

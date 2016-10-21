@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G31" minimumToolsVersion="Xcode 7.0">
+    <entity name="Responsable" representedClassName=".ResponsableEMO" syncable="YES">
+        <attribute name="apellidos" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="calleyno" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="colonia" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="estado" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fechanacimiento" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="municipio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Responsable" positionX="-54" positionY="-9" width="128" height="150"/>
+    </elements>
+</model>

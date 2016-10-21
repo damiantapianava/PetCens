@@ -7,32 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A30DD85D1DBA7CC200C360B6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30DD85C1DBA7CC200C360B6 /* SystemConfiguration.framework */; };
+		A30DD85F1DBA7D2C00C360B6 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30DD85E1DBA7D2C00C360B6 /* ConnectionManager.swift */; };
+		A30DD8631DBA808C00C360B6 /* PetCens.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A30DD8621DBA808C00C360B6 /* PetCens.sqlite */; };
+		A30DD8691DBA821200C360B6 /* PetCens.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A30DD8671DBA821200C360B6 /* PetCens.xcdatamodeld */; };
+		A30DD86C1DBA828F00C360B6 /* ResponsableEMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30DD86A1DBA828F00C360B6 /* ResponsableEMO+CoreDataProperties.swift */; };
+		A30DD86D1DBA828F00C360B6 /* ResponsableEMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30DD86B1DBA828F00C360B6 /* ResponsableEMO.swift */; };
+		A30DD86F1DBA909600C360B6 /* SOAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30DD86E1DBA909600C360B6 /* SOAPManager.swift */; };
+		A30DD8711DBAA18300C360B6 /* RESTManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30DD8701DBAA18300C360B6 /* RESTManeger.swift */; };
 		A371E5C11DB1AD53005C0E35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371E5C01DB1AD53005C0E35 /* AppDelegate.swift */; };
-		A371E5C41DB1AD53005C0E35 /* PetCens.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A371E5C21DB1AD53005C0E35 /* PetCens.xcdatamodeld */; };
 		A371E5C61DB1AD53005C0E35 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371E5C51DB1AD53005C0E35 /* MasterViewController.swift */; };
 		A371E5C81DB1AD53005C0E35 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371E5C71DB1AD53005C0E35 /* DetailViewController.swift */; };
 		A371E5CB1DB1AD53005C0E35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A371E5C91DB1AD53005C0E35 /* Main.storyboard */; };
 		A371E5CD1DB1AD54005C0E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A371E5CC1DB1AD54005C0E35 /* Assets.xcassets */; };
 		A371E5D01DB1AD54005C0E35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A371E5CE1DB1AD54005C0E35 /* LaunchScreen.storyboard */; };
-		A371E5DD1DB1AEA5005C0E35 /* Responsable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371E5DB1DB1AEA5005C0E35 /* Responsable+CoreDataProperties.swift */; };
-		A371E5DE1DB1AEA5005C0E35 /* Responsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371E5DC1DB1AEA5005C0E35 /* Responsable.swift */; };
-		A3BCB3721DB282A00077286D /* PetCens.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A3BCB3711DB282A00077286D /* PetCens.sqlite */; };
 		A3BCB3741DB284360077286D /* AddNewResponsible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCB3731DB284360077286D /* AddNewResponsible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A30DD85C1DBA7CC200C360B6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A30DD85E1DBA7D2C00C360B6 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		A30DD8621DBA808C00C360B6 /* PetCens.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = PetCens.sqlite; sourceTree = "<group>"; };
+		A30DD8681DBA821200C360B6 /* PetCens.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PetCens.xcdatamodel; sourceTree = "<group>"; };
+		A30DD86A1DBA828F00C360B6 /* ResponsableEMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ResponsableEMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A30DD86B1DBA828F00C360B6 /* ResponsableEMO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponsableEMO.swift; sourceTree = "<group>"; };
+		A30DD86E1DBA909600C360B6 /* SOAPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOAPManager.swift; sourceTree = "<group>"; };
+		A30DD8701DBAA18300C360B6 /* RESTManeger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTManeger.swift; sourceTree = "<group>"; };
 		A371E5BD1DB1AD53005C0E35 /* PetCens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetCens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A371E5C01DB1AD53005C0E35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A371E5C31DB1AD53005C0E35 /* PetCens.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PetCens.xcdatamodel; sourceTree = "<group>"; };
 		A371E5C51DB1AD53005C0E35 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		A371E5C71DB1AD53005C0E35 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A371E5CA1DB1AD53005C0E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A371E5CC1DB1AD54005C0E35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A371E5CF1DB1AD54005C0E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A371E5D11DB1AD54005C0E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A371E5DB1DB1AEA5005C0E35 /* Responsable+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Responsable+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A371E5DC1DB1AEA5005C0E35 /* Responsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responsable.swift; sourceTree = "<group>"; };
-		A3BCB3711DB282A00077286D /* PetCens.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = PetCens.sqlite; sourceTree = "<group>"; };
 		A3BCB3731DB284360077286D /* AddNewResponsible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewResponsible.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A30DD85D1DBA7CC200C360B6 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,8 +59,7 @@
 		A371E5B41DB1AD53005C0E35 = {
 			isa = PBXGroup;
 			children = (
-				A371E5DB1DB1AEA5005C0E35 /* Responsable+CoreDataProperties.swift */,
-				A371E5DC1DB1AEA5005C0E35 /* Responsable.swift */,
+				A30DD85C1DBA7CC200C360B6 /* SystemConfiguration.framework */,
 				A371E5BF1DB1AD53005C0E35 /* PetCens */,
 				A371E5BE1DB1AD53005C0E35 /* Products */,
 			);
@@ -68,16 +76,21 @@
 		A371E5BF1DB1AD53005C0E35 /* PetCens */ = {
 			isa = PBXGroup;
 			children = (
+				A30DD8621DBA808C00C360B6 /* PetCens.sqlite */,
+				A30DD8671DBA821200C360B6 /* PetCens.xcdatamodeld */,
+				A30DD86B1DBA828F00C360B6 /* ResponsableEMO.swift */,
+				A30DD86A1DBA828F00C360B6 /* ResponsableEMO+CoreDataProperties.swift */,
 				A371E5C01DB1AD53005C0E35 /* AppDelegate.swift */,
 				A3BCB3731DB284360077286D /* AddNewResponsible.swift */,
+				A30DD85E1DBA7D2C00C360B6 /* ConnectionManager.swift */,
 				A371E5C51DB1AD53005C0E35 /* MasterViewController.swift */,
 				A371E5C71DB1AD53005C0E35 /* DetailViewController.swift */,
+				A30DD86E1DBA909600C360B6 /* SOAPManager.swift */,
+				A30DD8701DBAA18300C360B6 /* RESTManeger.swift */,
 				A371E5C91DB1AD53005C0E35 /* Main.storyboard */,
 				A371E5CC1DB1AD54005C0E35 /* Assets.xcassets */,
 				A371E5CE1DB1AD54005C0E35 /* LaunchScreen.storyboard */,
 				A371E5D11DB1AD54005C0E35 /* Info.plist */,
-				A371E5C21DB1AD53005C0E35 /* PetCens.xcdatamodeld */,
-				A3BCB3711DB282A00077286D /* PetCens.sqlite */,
 			);
 			path = PetCens;
 			sourceTree = "<group>";
@@ -140,7 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3BCB3721DB282A00077286D /* PetCens.sqlite in Resources */,
+				A30DD8631DBA808C00C360B6 /* PetCens.sqlite in Resources */,
 				A371E5D01DB1AD54005C0E35 /* LaunchScreen.storyboard in Resources */,
 				A371E5CD1DB1AD54005C0E35 /* Assets.xcassets in Resources */,
 				A371E5CB1DB1AD53005C0E35 /* Main.storyboard in Resources */,
@@ -154,13 +167,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A371E5DE1DB1AEA5005C0E35 /* Responsable.swift in Sources */,
-				A371E5C41DB1AD53005C0E35 /* PetCens.xcdatamodeld in Sources */,
-				A371E5DD1DB1AEA5005C0E35 /* Responsable+CoreDataProperties.swift in Sources */,
+				A30DD8691DBA821200C360B6 /* PetCens.xcdatamodeld in Sources */,
 				A371E5C11DB1AD53005C0E35 /* AppDelegate.swift in Sources */,
 				A371E5C61DB1AD53005C0E35 /* MasterViewController.swift in Sources */,
+				A30DD85F1DBA7D2C00C360B6 /* ConnectionManager.swift in Sources */,
 				A371E5C81DB1AD53005C0E35 /* DetailViewController.swift in Sources */,
 				A3BCB3741DB284360077286D /* AddNewResponsible.swift in Sources */,
+				A30DD86D1DBA828F00C360B6 /* ResponsableEMO.swift in Sources */,
+				A30DD8711DBAA18300C360B6 /* RESTManeger.swift in Sources */,
+				A30DD86F1DBA909600C360B6 /* SOAPManager.swift in Sources */,
+				A30DD86C1DBA828F00C360B6 /* ResponsableEMO+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,14 +333,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A371E5C21DB1AD53005C0E35 /* PetCens.xcdatamodeld */ = {
+		A30DD8671DBA821200C360B6 /* PetCens.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A371E5C31DB1AD53005C0E35 /* PetCens.xcdatamodel */,
+				A30DD8681DBA821200C360B6 /* PetCens.xcdatamodel */,
 			);
-			currentVersion = A371E5C31DB1AD53005C0E35 /* PetCens.xcdatamodel */;
+			currentVersion = A30DD8681DBA821200C360B6 /* PetCens.xcdatamodel */;
 			path = PetCens.xcdatamodeld;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */

@@ -29,8 +29,7 @@ class AddNewResponsible: UIViewController, UITextFieldDelegate, UIPickerViewDele
     var municipios:NSArray?
     var colonias:NSArray?
     
-    var conexion:NSURLConnection?
-    var datosrecibidos: NSMutableData?
+
     
     override func viewDidLoad()
     {
@@ -46,14 +45,15 @@ class AddNewResponsible: UIViewController, UITextFieldDelegate, UIPickerViewDele
         
         self.pickerFN.hidden = true
         
-        self.pickerEstados.delegate = self
-        self.estados = NSArray()
-        self.municipios = NSArray()
-        self.colonias = NSArray()
+        self.pickerEstados.delegate   = self
+        self.pickerEstados.dataSource = self
         
-        self.consultaEstados()
+        self.estados    = NSArray()
+        self.municipios = NSArray()
+        self.colonias   = NSArray()
+        
+        RESTManager.instance.consultaEstados()
     }
-    
     
     override func viewDidAppear(animated: Bool)
     {
@@ -96,6 +96,17 @@ class AddNewResponsible: UIViewController, UITextFieldDelegate, UIPickerViewDele
         }
     }
     
+    func ocultaPickers()
+    {
+        var unFrame:CGRect
+        
+        unFrame = self.pickerFN.frame
+        
+        self.pickerFN.frame = CGRectMake(unFrame.origin.x, CGRectGetMaxY(self.view.frame), unFrame.size.width, unFrame.size.height)
+        
+        self.pickerFN.hidden = false
+    }
+    
     func subeBajaPicker(elPicker:UIView, subeOBaja: Bool)
     {
         var elFrame:CGRect = elPicker.frame
@@ -114,23 +125,6 @@ class AddNewResponsible: UIViewController, UITextFieldDelegate, UIPickerViewDele
             elPicker.frame = elFrame
         }
     }
-    
-    func ocultaPickers()
-    {
-        var unFrame:CGRect
-        
-        unFrame = self.pickerFN.frame
-        
-        self.pickerFN.frame = CGRectMake(unFrame.origin.x, CGRectGetMaxY(self.view.frame), unFrame.size.width, unFrame.size.height)
-        
-        self.pickerFN.hidden = false
-    }
-    
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-    }
-    
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
     {
@@ -177,57 +171,21 @@ class AddNewResponsible: UIViewController, UITextFieldDelegate, UIPickerViewDele
         return nil
     }
     
-    func consultaEstados()
+    //Cuando se selecciona el picker
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        let urlString = "http://edg3.mx/webservicessepomex/WMRegresaEstados.php"
-        
-        let laURL = NSURL(string: urlString)!
-        
-        let elRequest = NSURLRequest(URL: laURL)
-        
-        self.datosrecibidos = NSMutableData(capacity: 0)
-        
-        self.conexion = NSURLConnection(request: elRequest, delegate: self)
-        
-        if self.conexion == nil
+        if(pickerView.isEqual(pickerEstados))
         {
-            self.datosrecibidos = nil
-            self.conexion = nil
+            self.txtEstado.text = (estados![row].valueForKey("nombreEstado") as! String)
             
-            print("No se puiede acceder al WS Estados")
+            let codigoestado = (estados![row].valueForKey("c_estado") as? String)
+            
+            SOAPManager.instance.consultaMunicipios(codigoestado!)
         }
     }
     
-    func connection(connection: NSURLConnection, didFailWithError error: NSError)
+    override func didReceiveMemoryWarning()
     {
-        self.datosrecibidos = nil
-        self.conexion = nil
-        
-        print("No se puiede acceder al WS Estados")
-    }
-    
-    func connection(connection: NSURLConnection, didReceiveResponse response: NSURLResponse)
-    {
-        self.datosrecibidos?.length = 0
-    }
-    
-    func connection(connection: NSURLConnection, didReceiveData data: NSData)
-    {
-        self.datosrecibidos?.appendData(data)
-    }
-    
-    func connectionDidFinishLoading(connection: NSURLConnection)
-    {
-        do
-        {
-            let arregloRecibido = try NSJSONSerialization.JSONObjectWithData(self.datosrecibidos!, options: .AllowFragments) as! NSArray
-            
-            self.estados = arregloRecibido
-            
-            self.pickerEstados.reloadAllComponent()
-            
-        } catch {
-            
-        }
+        super.didReceiveMemoryWarning()
     }
 }
