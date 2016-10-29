@@ -181,7 +181,20 @@ class AddNewResponsible: UIViewController, UITextFieldDelegate, UIPickerViewDele
             let codigoestado = (estados![row].valueForKey("c_estado") as? String)
             
             SOAPManager.instance.consultaMunicipios(codigoestado!)
+            
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AddNewResponsible.municipiosResponse(_ :)), name: "WMRegresaMunicipios", object: nil)
+            
+            LoadingView.loadingInView(self.view, mensaje: "Buscando municipios")
         }
+    }
+    
+    func municipiosResponse(notif: NSNotification)
+    {
+        self.municipios = (notif.userInfo!["municipiosResponse"] as! NSArray)
+        
+        self.pickerMunicipios.reloadAllComponents()
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "WMRegresaMunicipios", object: nil)
     }
     
     override func didReceiveMemoryWarning()

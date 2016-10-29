@@ -20,11 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         
         let destino = self.applicationDocumentsDirectory.URLByAppendingPathComponent("PetCens.sqlite")
         
-        if !(NSFileManager.defaultManager().fileExistsAtPath(destino.path!))
+        if !(NSFileManager.defaultManager().fileExistsAtPath(destino!.path!))
         {
             do
             {
-                try NSFileManager.defaultManager().copyItemAtPath(origen!, toPath: destino.path!)
+                try NSFileManager.defaultManager().copyItemAtPath(origen!, toPath: destino!.path!)
                 
             } catch {
                 

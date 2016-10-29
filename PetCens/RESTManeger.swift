@@ -75,9 +75,11 @@ public class RESTManager: NSObject, NSURLConnectionDelegate
         {
             let arregloRecibido = try (NSJSONSerialization.JSONObjectWithData(self.datosrecibidos!, options: .AllowFragments) as? NSArray)
             
+/* TODO actualizar UI con un delegate
             self.estados = arregloRecibido
             
             self.pickerEstados.reloadAllComponents()
+ */
             
         } catch {
             

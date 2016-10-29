@@ -8,12 +8,18 @@
 
 import Foundation
 
+public protocol SOAPManagerDelegate: NSObjectProtocol
+{
+    func WMRegresaMunicipiosResponse(responseArray:NSArray)
+}
+
 public class SOAPManager: NSObject, NSURLConnectionDelegate, NSXMLParserDelegate
 {
     static let instance:SOAPManager = SOAPManager()
 
     var conexion:NSURLConnection?
     var datosrecibidos: NSMutableData?
+    var delegate: SOAPManagerDelegate?
     
     let NODO_RESULTADOS = "NewDataSet"
     let NODO_MUNICIPIO  = "ReturnDataSet"
@@ -156,7 +162,22 @@ public class SOAPManager: NSObject, NSURLConnectionDelegate, NSXMLParserDelegate
     
     public func parserDidEndDocument(parser: NSXMLParser)
     {
-        print("resultado, parseado: \(municipios!.description)")
+        if municipios != nil
+        {
+            print("resultado, parseado: \(municipios!.description)")
+            
+            let ns = NSNotification(name: "WMRegresaMunicipios", object: nil, userInfo: ["municipiosResponse":self.municipios!])
+            
+            NSNotificationCenter.defaultCenter().postNotification(ns)
+            
+            if delegate != nil
+            {
+                if delegate!.respondsToSelector(Selector("WMRegresaMunicipiosResponse"))
+                {
+                    delegate!.WMRegresaMunicipiosResponse(self.municipios!)
+                }
+            }
+        }
     }
 }
 
